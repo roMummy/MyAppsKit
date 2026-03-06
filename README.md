@@ -16,8 +16,7 @@ A reusable Swift Package for showing an app's "My Apps" section.
 In Xcode:
 
 1. `File` -> `Add Packages...`
-2. Click `Add Local...`
-3. Select `Packages/MyAppsKit`
+2.  input `https://github.com/roMummy/MyAppsKit.git`
 4. Add product to your target:
    - `MyAppsUI` for ready-to-use SwiftUI section UI.
    - `MyAppsCore` for non-UI/business-layer usage only.
