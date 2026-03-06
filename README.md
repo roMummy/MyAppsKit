@@ -7,6 +7,18 @@ A reusable Swift Package for showing an app's "My Apps" section.
 - `MyAppsCore`: data models, iTunes API service, and view model.
 - `MyAppsUI`: ready-to-use SwiftUI section view.
 
+## What It Shows
+
+This package shows **other apps from the same App Store publisher account** (same `artistId`) as your seed app.
+
+Selection logic:
+
+1. Use `developerSeedAppID` to look up a seed app and resolve its `artistId`.
+2. Fetch apps for that developer and keep only items with the same `artistId`.
+3. Exclude `currentAppID` so the current app is not shown in the list.
+4. Apply storefront filtering by `countryCode` (results can vary by country).
+
+
 ## Supported Localizations
 
 - `en`, `zh-Hans`, `zh-Hant`, `ja`, `ko`, `de`, `fr`, `es`, `it`, `pt-BR`, `pt-PT`, `ru`, `tr`, `pl`, `ar`
